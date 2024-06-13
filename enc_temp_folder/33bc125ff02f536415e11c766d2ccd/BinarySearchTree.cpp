@@ -98,4 +98,74 @@ public:
 		}
 	}
 
-	
+	void postorder(Node* ptr)
+	{
+		if (ROOT = nullptr)
+		{
+			cout << "Tree is Empty" << endl;
+			return;
+		}
+		if (ptr != nullptr)
+		{
+			
+			postorder(ptr->leftchild);
+			postorder(ptr->rightchild);
+			cout << ptr->info << " ";
+		}
+	}
+};
+
+int main()
+{
+	BinaryTree x;
+	while (true)
+	{
+		cout << "\nMenu" << endl;
+		cout << "1. Implement insert operation" << endl;
+		cout << "2. perform inorder traversal" << endl;
+		cout << "3. perform preorder traversal" << endl;
+		cout << "4. perform postorder traversal" << endl;
+		cout << "exit" << endl;
+		cout << "\nEnter your choice (1-5)" << endl;
+
+		char ch;
+		cin >> ch;
+		cout << endl;
+
+		switch (ch)
+		{
+		case '1':
+		{
+			cout << "Enter a word: ";
+			string word;
+			cin >> word;
+			x.insert(word);
+			break;
+		}
+		case '2':
+		{
+			x.inorder(x.ROOT);
+			break;
+		}
+		case '3':
+		{
+			x.preorder(x.ROOT);
+			break;
+		}
+		case '4':
+		{
+			x.postorder(x.ROOT);
+			break;
+		}
+		case '5':
+		{
+			break;
+		}
+		default:
+		{
+			cout << "Invalid" << endl;
+			break;
+		}
+		}
+	}
+}
