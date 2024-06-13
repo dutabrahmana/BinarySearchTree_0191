@@ -28,4 +28,15 @@ public:
 		ROOT = nullptr;
 	}
 
+	void insert(string element)
+	{
+		
+
+		if (parent == nullptr) // if the parent is NULL (Tree is Empty)
+		{
+
+		}
+
+
+	}
 };
