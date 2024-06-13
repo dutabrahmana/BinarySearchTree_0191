@@ -30,13 +30,16 @@ public:
 
 	void insert(string element)
 	{
-		
+		Node* newNode = new Node(element, nullptr, nullptr);
+		newNode->info = element;
+		newNode->leftchild = nullptr;
+		newNode->rightchild = nullptr;
 
-		if (parent == nullptr) // if the parent is NULL (Tree is Empty)
-		{
+		Node* parent = nullptr;
+		Node* currentNode = nullptr;
+		search(element, parent, currentNode);
 
-		}
-
+	
 
 	}
 };
